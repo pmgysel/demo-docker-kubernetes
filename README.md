@@ -1,4 +1,6 @@
-# Prerequisites
+# Simple Demo for Docker and Kubernetes
+
+## Prerequisites
 
 * Maven
 * Java
@@ -9,7 +11,7 @@
 Install and run Docker & Kubernetes locally (Linux/Windows/Mac):
 https://docs.docker.com/get-docker/
 
-# Run app on your OS
+## Run app on your OS
 
 REST endpoints:
 * GET localhost:8080/actuator/health: health endpoint
@@ -32,7 +34,7 @@ Test running app in second terminal:
 Hello world, here is demo-docker-kubernetes version 0.0.1-SNAPSHOT
 ```
 
-# Docker demo
+## Docker demo
 
 Option 1: Create Docker image from JAR
 
@@ -55,7 +57,16 @@ Option 2: Create Docker image from source
 Hello world, here is demo-docker-kubernetes version 0.0.1-SNAPSHOT
 ```
 
-# Kubernetes demo
+Clean up everything:
+
+```sh
+> docker ps
+CONTAINER ID     IMAGE                          COMMAND                  CREATED  ....
+af2b2f9d190c     demo-docker-kubernetes:0.0.1   "/bin/sh -c 'java -j…"   8 seconds ...
+> docker stop af2b2f9d190c
+```
+
+## Kubernetes demo
 
 ```sh
 > cd kubernetes
