@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: demo-docker-kubernetes
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-docker-kubernetes
+    spec:
+      containers:
+      - name: demo-docker-kubernetes
+        image: demo-docker-kubernetes:0.0.1
+        ports:
+        - containerPort: 8080
