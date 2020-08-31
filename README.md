@@ -1,4 +1,4 @@
-# Simple Demo for Docker and Kubernetes
+# Simple Demo for Docker & Kubernetes
 
 ## Prerequisites
 
